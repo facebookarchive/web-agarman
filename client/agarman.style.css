@@ -1,0 +1,130 @@
+body {
+    text-align:center;
+    background-color: e7eef5;
+    font-family: Segoe UI, Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+}
+
+.outercontainer {border: 1px solid black; margin: 2px; border-radius:10px;}
+
+#allcontent {
+    height: 100%;
+    background-image: url('agarlogo.png');
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: 90% 0%;
+}
+
+#startcontainer {text-align:center}
+.jqslider { width: 25%; margin: 1em; }
+.sliderlabel {
+    margin: -10 0 10 0;
+    font-weight: bold;
+    color:darkred
+}
+
+.jqbutton {
+    margin: 3px;
+}
+
+#purchasecontainer {
+    padding: .25em 0;
+    width: 65%;
+}
+#purchasecontainer > div {
+    margin-right: 2%;
+}
+.moneysicon {
+    height:1em;
+    width:1em;
+    padding-top: .125em;
+    vertical-align: top;
+}
+#moneysbalance {
+    float:right;
+    padding: .5em;
+}
+
+#gamecontainer {
+    display: none;
+}
+
+#letters {
+    width: 85%;
+    margin: .25em auto;
+}
+
+#answercontainer {
+    padding: .75em;
+}
+
+#answer {
+    background:white;
+    height: 1.25em;
+    width: 25%;
+    border-radius:.625em;
+    text-align:center;
+    margin: 0 auto .375em auto;
+    display: inline-block;
+}
+
+#wordok {
+    background-image: url(images/ui-bg_glass_40_0a0a0a_1x400.png), url('xp.png');
+    background-size: 100%, 1px;
+    background-color: red;
+    background-repeat: no-repeat;
+    background-position: left, bottom;
+    margin: 0 .25em;
+    padding: 0 .25em;
+    display: inline-block;
+    vertical-align: top;
+    width: 10em
+    border: 1px solid black;
+}
+
+#wordok span {
+    padding: .125em;
+}
+
+#oktext {
+    float: left;
+}
+
+.graybutton {
+    background: #777777 none;
+}
+
+#timer {
+    float: right;
+}
+
+#resultscontainer {
+    height:25%;
+    overflow-y: scroll;
+    width:320px;
+    margin-left: auto;
+    margin-right:auto;
+    border: 1px solid black;
+    border-radius: 0;
+    vertical-align:top;
+}
+
+#scores {
+    float:left;
+    width:50%;
+}
+
+.score {margin: 3px; text-align:center;}
+.outercontainer div {border: none}
+.playedword { }
+.playedscore {text-align: right; width:15%;}
+.total {font-weight: bold; background-color: #eee}
+
+#wordsplayed {
+    float:left;
+    width:45%
+}
+
+.clearfix {
+    clear: both;
+}

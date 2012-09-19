@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<!--
+Collects all the resources needed to render the client.
+/**
+* Copyright 2012 Facebook, Inc.
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); you may
+* not use this file except in compliance with the License. You may obtain
+* a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+* WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+* License for the specific language governing permissions and limitations
+* under the License.
+*/
+-->
+<html>
+  <head>
+    <title>&#x274D; AGAR MAN!</title>
+    <script src="client/jquery.min.js">
+    </script>
+    <script src="client/jquery-ui.min.js">
+    </script>
+    <link rel="stylesheet" href="client/trontastic.jquery-ui.css" />
+    <link rel="stylesheet" href="client/agarman.style.css" />
+    <script src="client/agarman.js"> </script>
+    <script src="client/jquery.cookie.js"> </script>
+    <script src="client/md5-min.js"> </script>
+    <script src="client/polyfill.js"> </script>
+
+    <?= $GLOBALS['clientFragment'] ?>
+
+  </head>
+  <body>
+    <!-- TAG:AUTH -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+       FB.init({
+        appId      : settings['appID'], // App ID
+        channelUrl : '//www.freeeel.com/channel.php', // Channel File
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true,  // parse XFBML
+        frictionlessRequests: true,
+      });
+
+      // Additional initialization code here
+      if(getName) getName(false);
+      $(initOffer);
+      };
+
+      // Load the SDK Asynchronously
+      (function(d){
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+      }(document));
+    </script>
+    <!-- -->
+    <div id="allcontent" style="height:100%">
+      <div id="setupcontainer">
+        <div id="topcontainer" class="outercontainer">
+          <div id="id">Hello!</div>
+        </div>
+        <div id="startcontainer" class="outercontainer">
+          <div id="difficultycontainer" class="slidercontainer container">
+            <div id="difficulty" class="jqslider"> </div>
+            <div id="difficultylabel" class="sliderlabel"> </div>
+          </div>
+
+          <div id="lengthcontainer" class="slidercontainer container">
+            <div id="length" class="jqslider"> </div>
+            <div id="lengthlabel" class="sliderlabel"> </div>
+          </div>
+          <div id="initcontainer">
+            <div id="initmatch" class="jqbutton">Start game</div>
+          </div>
+        </div>
+        <div id="purchasecontainer" style="display:none"></div>
+      </div>
+
+      <div id="gamecontainer" class="outercontainer">
+        <div id="letters"></div>
+        <div id="answercontainer">
+          <div id="answer"></div>
+          <div id="wordok"><span id="oktext"></span><span id="timer"></span></div>
+        </div>
+        <div class="clearfix"> </div>
+
+        <div id="resultscontainer" class="outercontainer">
+          <table id="wordsplayed" class="scrollable"></table>
+          <div id="scores" class=""></div>
+        </div>
+        <div id="quitmatch" class="jqbutton">Quit to Main Menu</div>
+      </div>
+    </div>
+  </body>
+</html>
