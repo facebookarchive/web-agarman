@@ -157,7 +157,7 @@ function validatePlayer() { // Figure out who's playing
 //  error_log(var_export($_REQUEST, true));
 //  error_log(var_export($_COOKIE, true));
 
-    if($sr['user_id']){
+    if(isset($sr['user_id'])){
       $GLOBALS['fbid'] = $facebook->getUser();
       $GLOBALS['userToken'] = $facebook->getAccessToken();
 //      error_log("using browser state for auth, user $GLOBALS[fbid], " .
